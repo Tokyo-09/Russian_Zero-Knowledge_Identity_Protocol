@@ -1,4 +1,16 @@
 [workspace]
 resolver = "3"
-members = ["rzip-browser", "rzip-cli", "rzip-core", "rzip-mobile", "rzip-network", "rzip-storage", "rzip-verifiable"]
+members = [
+    "rzip-browser", 
+    "rzip-cli", 
+    "rzip-core", 
+    "rzip-crypto", 
+    "rzip-network", 
+    "rzip-storage", 
+    "rzip-verifiable"
+]
 
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

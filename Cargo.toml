@@ -11,9 +11,15 @@ members = [
     "examples/rzip-migrant-zk/rzip-migrant-cli",
     "examples/rzip-migrant-zk/rzip-migrant-core",
     "examples/rzip-migrant-zk/rzip-migrant-crypto"
-]
+, "examples/rzip-rescomply-zk/rzip-rescomply-core", "examples/rzip-rescomply-zk/rzip-rescomply-crypto", "examples/rzip-rescomply-zk/rzip-rescomply-cli"]
 
 [profile.release]
 opt-level = 3
 lto = true
 codegen-units = 1
+
+[workspace.dependencies]
+anyhow = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+serde = { version = "1.0", features = ["derive"] }
+clap = { version = "4.0", features = ["derive"] }

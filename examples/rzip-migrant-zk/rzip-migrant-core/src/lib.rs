@@ -23,7 +23,7 @@ impl RegionCode {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum PermitType {
     Visa,
-    RVP,  
+    RVP,
     Patent,
     VNJ,
 }

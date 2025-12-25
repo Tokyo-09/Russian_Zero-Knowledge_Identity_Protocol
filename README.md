@@ -24,6 +24,58 @@
 
 [**RZIP-Migrant-module**](examples/rzip-migrant-zk/README.md) - Система верификации миграционного статуса иностранного гражданина в России с использованием Zero-Knowledge Identity Protocol. 
 
+## Установка
+
+Для этого вам нужен Rust 1.70+ [(ссылка)](https://rustup.rs/)
+
+```
+# Клонируйте репозиторий
+git clone https://github.com/Tokyo-09/Russian_Zero-Knowledge_Identity_Protocol.git
+cd Russian_Zero-Knowledge_Identity_Protocol
+
+# Соберите проект
+cargo build --release
+```
+все готово!
+
+## Использование
+
+```
+.\rzip-cli.exe --help
+Usage: rzip-cli.exe <COMMAND>
+
+Commands:
+  create-did  Create a DID
+  prove-age   Generate ZK age proof
+  verify      Verify a proof file
+  help        Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+```
+
+```
+$ .\rzip-cli.exe create-did --method rzip --id test
+✅ DID created: did:rzip:test
+
+$ .\rzip-cli.exe prove-age --age 19 --subject-did did:rzip:test
+✅ Proof created: age_proof_19.json
+📊 Commitment: 2eabba5d
+🔒 Proves: age ≥ 18
+⏱️  Proof size: 5773 bytes
+🕒 Generation: 255.8349ms
+🕒 Verification: 42.1504ms
+
+$ .\rzip-cli.exe verify --file .\age_proof_19.json
+🔍 Verifying proof from .\age_proof_19.json...
+✅ Proof is VALID
+🎉 Subject is ≥ 18 years old
+👤 DID: did:rzip:test
+📅 Issued: 2025-12-25T15:55:38.401391700+00:00
+🕒 Verification time: 51.5627ms
+```
+
 ## Демо
 
 ![Demo0](./img/showcase0.jpg)

@@ -1,17 +1,16 @@
-Russian Zero-Knowledge Identity Protocol - RZIP-Migrant-module 
+# Русская версия [(README)](./README_RU.md)
 
-Система верификации миграционного статуса иностранного гражданина в России с использованием Zero-Knowledge Identity Protocol.
+System for verifying the migration status of foreign citizens in Russia using the Zero-Knowledge Identity Protocol.
 
-Что может доказать система
+What the system can prove
 
-С помощью Zero-Knowledge Proofs пользователь может доказать:
+With Zero-Knowledge Proofs, users can prove:
 
-    1. Нахождение в разрешённом регионе (Москва, СПб, МО и др.)
-    2. Тип разрешения (Виза, РВП, Патент, ВНЖ)
-    3. Действительный статус (не просрочен, не аннулирован)
-    4. Соблюдение сроков пребывания
+    1. That they are in an authorized region
+    2. The type of permit (visa, temporary residence permit, permanent residence permit)
+    3. Valid status (not expired, not revoked)
+    4. Compliance with the terms of stay
 
-
-Демо
+## Demo
 
 ![demo_migrant_0](../../img/rzip-migrant.jpg)

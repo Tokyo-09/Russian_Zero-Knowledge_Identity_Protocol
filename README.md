@@ -1,44 +1,42 @@
-## RZIP — протокол для децентрализованного управления цифровой идентичностью.
+# Русская версия [(README)](./README_RU.md)
 
-Позволяет субъектам генерировать, хранить и верифицировать утверждения (claims) о себе — например, возраст, гражданство, академические достижения — без зависимости от централизованных реестров или третьих сторон.
+## RZIP is a protocol for decentralized digital identity management
 
-Верификация реализована через zero-knowledge proofs (ZKPs): проверяющая сторона может убедиться в корректности утверждения, не получая доступа к исходным данным и не требуя раскрытия личной информации. 
-Схемы доказательств привязаны к криптографически производным идентификаторам (например, DID), контролируемым владельцем.
+It allows individuals to generate, store, and verify claims about themselves—such as age, citizenship, and academic achievements—without relying on centralized registries or third parties.
 
-Проект находится на очень ранней стадии разработки.
-Текущая цель — реализовать минимальный, но полноценный proof-of-concept, включающий:
-    выпуск автономных верифицируемых учётных данных,  
-    генерацию и проверку ZK-proof (например, age ≥ 18),  
-    полный контроль пользователем над ключами и данными без внешних зависимостей.
+Verification is implemented through zero-knowledge proofs (ZKPs): the verifying party can verify the correctness of the claim without accessing the source data or requiring the disclosure of personal information. Proof schemes are tied to cryptographically derived identifiers (e.g., DID) controlled by the owner.
 
-Как и куда проект будет развиваться пока не известно. Так же как и будет ли соответствие каким либо Государственным стандартам. 
-Репозиторий существует, чтобы проверить техническую реализуемость идеи.
+The project is at a very early stage of development. 
+The current goal is to implement a minimal but complete proof-of-concept, including: 
+    issuance of autonomous verifiable credentials,
+    generation and verification of ZK-proofs (e.g., age ≥ 18),
+    complete user control over keys and data without external dependencies.
 
-Делаю это потому, что идея заинтерисовала меня и было бы здорово ее реализовать.
-Пока «успех» — это рабочий POC, позволяющий, например, подтвердить «мне ≥18», не раскрывая дату рождения.
-Если из этого вырастет что-то большее — отлично. Если нет — хотя бы схемы останутся корректными и переиспользуемыми.
+How and where the project will develop is still unknown. It is also unclear whether it will comply with any government standards. The repository exists to test the technical feasibility of the idea.
 
-Конструктивные комментарии, предложения по моделированию угроз и помощь в тестировании особенно важны на этом этапе.
+I am doing this because the idea interests me and it would be great to implement it. So far, the “success” is a working POC that allows, for example, to confirm “I am ≥18” without revealing my date of birth. If something more grows out of this, great. If not, at least the diagrams will remain correct and reusable.
 
-## Примеры / Дополнительные модули
+Constructive comments, suggestions for threat modeling, and help with testing are especially important at this stage.
 
-[**RZIP-Migrant-module**](examples/rzip-migrant-zk/README.md) - Система верификации миграционного статуса иностранного гражданина в России с использованием Zero-Knowledge Identity Protocol. 
+## Examples / Additional modules
 
-## Установка
+[**RZIP-Migrant-module**](examples/rzip-migrant-zk/README.md) - System for verifying the migration status of foreign citizens in Russia using the Zero-Knowledge Identity Protocol. 
 
-Для этого вам нужен Rust 1.70+ [(ссылка)](https://rustup.rs/)
+## Installation
+
+For this, you need Rust 1.70+ [(link)](https://rustup.rs/)
 
 ```
-# Клонируйте репозиторий
+# Clone the repository
 git clone https://github.com/Tokyo-09/Russian_Zero-Knowledge_Identity_Protocol.git
 cd Russian_Zero-Knowledge_Identity_Protocol
 
-# Соберите проект
+# Build the project
 cargo build --release
 ```
-все готово!
+All done!
 
-## Использование
+## Usage
 
 ```
 .\rzip-cli.exe --help
@@ -76,7 +74,7 @@ $ .\rzip-cli.exe verify --file .\age_proof_19.json
 🕒 Verification time: 51.5627ms
 ```
 
-## Демо
+## Demo
 
 ![Demo0](./img/showcase0.jpg)
 ![Demo1](./img/showcase1.jpg)

@@ -1,0 +1,21 @@
+[package]
+name = "szip-rescomply-crypto"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+szip-rescomply-core = { path = "../szip-rescomply-core" }
+
+anyhow = "*"
+bulletproofs = "5.0"
+curve25519-dalek = { version = "4.1", features = ["serde", "rand_core"] }
+merlin = "3.0"
+rand = "0.8"
+serde = { version = "*", features = ["derive"] }
+sha3 = "0.10"
+hex = "0.4"
+serde_json = "*"
+
+[dependencies.chrono]
+version = "0.4"
+features = ["serde"]    

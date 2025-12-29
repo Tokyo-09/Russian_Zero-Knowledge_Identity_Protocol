@@ -1,0 +1,8 @@
+[package]
+name = "szip-verifiable"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+szip-core = { path = "../szip-core" }
+szip-crypto = { path = "../szip-crypto" }

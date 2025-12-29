@@ -1,0 +1,18 @@
+[package]
+name = "szip-migrant-crypto"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0"
+blake3 = "1.0"
+bulletproofs = "5.0"
+curve25519-dalek = { version = "4.1", features = ["serde"] }
+merlin = "3.0"
+rand = "0.8"
+serde = { version = "1.0", features = ["derive"] }
+chrono = { version = "0.4", features = ["serde"] }
+serde_bytes = "0.11"
+
+szip-migrant-core = { path = "../szip-migrant-core" }
+szip-crypto = { path = "../../../szip-crypto" } 
